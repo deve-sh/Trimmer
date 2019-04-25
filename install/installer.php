@@ -206,7 +206,7 @@
 
 				// Forming the database string to the configuration file.
 
-				$configstring = "<?php\nsession_start();\nrequire('./inc/connect.php');\n";
+				$configstring = "<?php\nsession_start();\nerror_reporting(0);\nrequire('./inc/connect.php');\n";
 				$configstring .= "\$appname = '{$appdetails['appname']}';\n\$sub = '{$appdetails['subs']}';\n";
 
 				foreach ($dbdetails as $key => $value) {
