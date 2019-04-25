@@ -63,7 +63,7 @@
 		$footerhtml .= "<a href='{$link}' target='_blank' rel='noreferrer noopener'>{$site}</a> &nbsp;";
 	}
 
-	// The wait time for the app to redirect to a link. Can be extended if someone wishes to run ads on the redirect.
+	// The wait time (In seconds) for the app to redirect to a link. Can be extended if someone wishes to run ads on the redirect.
 
 	$appwaittime = 0;	// Default set to 0.
 
