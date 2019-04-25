@@ -6,6 +6,12 @@
 
 	$_SESSION['tuserid'] = false;
 	$_SESSION['tlogin'] = false;
+
+	if(isset($_COOKIE['tlogin'])){
+		setcookie('tlogin','',time()-3600);
+	}
+
+	// Removing any login info from any instance of the pre-installed app.
 ?>
 <!DOCTYPE html>
 <html>

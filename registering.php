@@ -36,7 +36,8 @@
 	?>
 </head>
 <?php include 'header.php'; ?>
-<body class="container-fluid pad">
+<body class="container-fluid">
+	<div class="pad">
 	<?php
 		
 		// Checking the form inputs.
@@ -74,5 +75,6 @@
 		}
 
 	?>
+	</div>
 </body>
 </html>

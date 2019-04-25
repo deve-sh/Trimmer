@@ -34,7 +34,8 @@
 <?php
 		include 'header.php';
 ?>
-<body class="container-fluid pad">
+<body class="container-fluid">
+	<div class="pad">
 	<?php
 		
 		// Checking the login info.
@@ -45,7 +46,7 @@
 
 		// User Selection Query.
 
-		$query1 = "SELECT * FROM ".$sub."users WHERE username = '{$username}' OR email='{$email}'";
+		$query1 = "SELECT * FROM ".$sub."users WHERE username = '{$username}' OR email='{$username}'";
 
 		if($db->query($query1)){
 			$userarray = $db->fetch($db->query($query1));
@@ -88,5 +89,6 @@
 			exit();
 		}
 	?>
+	</div>
 </body>
 </html>
