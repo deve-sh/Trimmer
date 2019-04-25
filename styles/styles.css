@@ -1,0 +1,295 @@
+/* File associated with Styles */
+
+/* Universal Styles. Overwriting some Bootstrap Styles. */
+
+*{
+	box-sizing: border-box;
+	border: 0;
+	line-height: 1.6;
+}
+
+body{
+	font-size: 1em;
+}
+
+.row{
+	margin : 0;
+}
+
+.btn{
+	color: #ffffff;
+}
+
+.btn:hover{
+	color: #ffffff;
+}
+
+.container-fluid{
+	padding: 0;
+	margin: 0;
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(placeholder);
+    color: gray;
+}
+
+.pad{
+	padding: 1rem;
+}
+
+/* Install Page */
+
+.installmain{
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+	background: #141E30;
+	text-align: center;
+	background: #2193b0;
+	min-height: 100vh;
+}
+
+#installform{
+	padding: 1rem;
+	background: #ffffff;
+	color: #212121;
+	display: inline-block;
+	box-shadow: 0 5px 20px 0 rgba(0,0,0,0.05);
+	min-width: 82%;
+	max-width: 90%;
+	border-radius: 0.4rem;
+}
+
+.alignleft{
+	text-align: left;
+}
+
+.installindicator{
+	padding: 1rem;
+	display: inline-block;
+	background: #ffffff;
+	border-radius: 0.35rem;
+}
+
+/* Header */
+
+.header{
+	padding: 0;
+	background: #ffffff;
+}
+
+.header .left, .header .right{
+	padding: 1rem;
+}
+
+.logoimage{
+	max-width: 100px;
+	max-height: 25px;
+}
+
+/* Index Page */
+
+#first{
+	padding: 1rem;
+}
+
+.indexdesc{
+	padding: 0.4rem;
+	padding-bottom: 7rem;
+	padding-tom: 5rem;
+	text-align: center;
+}
+
+.indexcontinue{
+	background: #2e91fc;
+	color: #ffffff;
+	padding: 1rem;
+}
+
+.bottomimg{
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	bottom: 0;
+}
+
+.explainer li{
+	list-style: square;
+	padding-left: 1rem;
+}
+
+.explainer li::before{
+	content: " - "
+}
+
+/* Login Page */
+
+#loginpage{
+	padding: 2rem;
+	padding-top: 5rem;
+	min-height: 95vh;
+	background: #2e91fc;
+	text-align: center;
+}
+
+#loginform{
+	display: inline-block;
+	min-width: 40vw;
+	padding: 1rem;
+	text-align: center;
+	background: #ffffff;
+	border-radius : 0.4rem;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12);
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.homebutton{
+	background: orangered;
+	color: #ffffff;
+}
+
+.homebutton:hover{
+	background: red;
+	color: #ffffff;
+}
+
+label span{
+	vertical-align: middle;
+}
+
+/*	User CP  */
+
+#linkshortener{
+	padding: 0.8rem;
+	width: 100%;
+}
+
+#linkshortener input{
+	background: transparent;
+}
+
+#shortenform{
+	padding: 1rem;
+	border-radius: 0.25rem;
+	background: #fafafa;
+	border: 0.1rem solid #cfcfcf;
+}
+
+#shortenform input{
+	padding: 0.3rem;
+}
+
+#shortenform input::placeholder{
+	color: #777777;
+}
+
+.aligncenter{
+	text-align: center;
+}
+
+#userdetails{
+	padding: 1rem;
+}
+
+.numlinks{
+	font-size: 3rem;
+	text-align: center;
+}
+
+#userlinks{
+	padding: 0;
+	overflow: auto;
+}
+
+#userlinks .row{
+	overflow: auto;
+}
+
+#userlinks .col-xs-4{
+	text-align: center;
+	width: 33.333333%;
+}
+
+.pagination_s{
+	overflow: auto;
+	height: auto;
+	list-style: none;
+	list-style-type: none; 
+	text-align: center;
+	margin: 0;
+}
+
+.pagination_s a{
+	color: #000000;
+}
+
+.pagination_s .page-link,.active{
+	padding: 0.8rem;
+	display: inline-block;
+	border-radius: 0.3rem;
+	color: #000000;
+}
+
+#link{
+	box-shadow: 0 5px 20px 0 rgba(0,0,0,0.05);
+}
+
+.linkarea{
+	background: #ffffff;
+	color: #212121;
+	padding: 1rem;
+}
+
+.copybutton{
+	background: skyblue;
+	color: #ffffff;
+	padding: 1rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.useroptions{
+	padding: 1rem;
+}
+
+.updateemail{
+	background: #03a9f4;
+}
+
+.updatepass{
+	background: #f44336;
+}
+
+.linkstable .userlinks{
+	text-align: center;
+}
+
+.deleteicon{
+	color: red;
+}
+
+
+/* Footer */
+
+footer{
+	background: #343434;
+	color: #ffffff;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* Media Queries. Place Responsive Stuff here. */
+/* Since only relative sizing units have been used, there is no need for any responsive elements here as they are primitively responsive anyway. */
+
+/* Tablets */
+
+@media only screen and (max-width: 728px){
+	
+}
+
+/* Phones */
+
+@media only screen and (max-width: 550px){
+	
+}
