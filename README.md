@@ -29,11 +29,11 @@ The Project is in continuous development and you can suggest changes to it as we
 
 Instructions on :
 
-* [Editing Styles]()
-* [Editing Application Configurations]()
+* [Editing Styles](https://github.com/deve-sh/Trimmer/blob/master/styles/README.md)
+* [Editing Application Configurations](https://github.com/deve-sh/Trimmer/blob/master/inc/README.md)
 
 For any issues, raise an issue in the repository or [mail me](mailto:devesh2027@gmail.com).
 
 ## License
 
-The Project is under [MIT License]().
+The Project is under [MIT License](https://github.com/deve-sh/Trimmer/blob/master/LICENSE).
