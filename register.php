@@ -38,8 +38,8 @@
 	<?php
 		include './header.php';
 	?>
-	<div id='loginpage'>
-		<form id="loginform" action="registering.php">
+	<div id='registerpage'>	<!-- Ignore the tag names -->
+		<form id="registerform" action="registering.php" method="POST">
 			<h4>Register</h4>
 			<br/>
 			<input type="text" name="username" placeholder="Username" required />

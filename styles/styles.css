@@ -123,9 +123,9 @@ body{
 	content: " - "
 }
 
-/* Login Page */
+/* Login and Register Page */
 
-#loginpage{
+#loginpage,#registerpage{
 	padding: 2rem;
 	padding-top: 5rem;
 	min-height: 95vh;
@@ -133,7 +133,7 @@ body{
 	text-align: center;
 }
 
-#loginform{
+#loginform,#registerform{
 	display: inline-block;
 	min-width: 40vw;
 	padding: 1rem;

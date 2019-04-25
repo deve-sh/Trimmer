@@ -31,9 +31,11 @@
 		include 'inc/prereq.php';
 	?>
 </head>
+<?php
+		include 'header.php';
+?>
 <body class="container-fluid pad">
 	<?php
-		include 'header.php';
 		
 		// Checking the login info.
 

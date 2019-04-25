@@ -28,16 +28,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $appname; ?> - Logging In ...</title>
+	<title><?php echo $appname; ?> - Registering</title>
 
 	<?php
 		include 'inc/styles.php';
 		include 'inc/prereq.php';
 	?>
 </head>
+<?php include 'header.php'; ?>
 <body class="container-fluid pad">
 	<?php
-		include 'header.php';
 		
 		// Checking the form inputs.
 
@@ -51,17 +51,28 @@
 
 		if($db->numrows($validator1) > 0){
 			echo "<br>A user with the username or email already exists.<br>";
-			header("refresh:2;url=register.php");
+			header("refresh:50;url=register.php");
 			exit();
 		}
 
-		$salt = generate();	 // Generating a random salt to be hashed with.
+		$salt = saltgen();	 // Generating a random salt to be hashed with.
 
 		$password = crypt($password,$salt);
-		$password = $db->escape(md5($password));	// One extra layer of protection.
+		$password = md5($password);	// One extra layer of protection.
 
-		
-		
+		$insertionsql = "INSERT INTO ".$sub."users(username,email,password,salt) VALUES('".$username."','".$email."','".$password."','".$salt."')";
+
+		if($db->query($insertionsql)){
+			echo "Successfully Registered. Redirecting to login page.";
+			header("refresh:2.5;url=login.php");
+			exit();
+		}
+		else{
+			echo "There was a problem registering.";
+			header("refresh:1.url=register.php");
+			exit();
+		}
+
 	?>
 </body>
 </html>

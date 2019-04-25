@@ -126,10 +126,10 @@
 				while ($link = $db->fetch($result)) {
 				  	echo "<tr class='userlink'>
 							<td>
-								<a href='".$link['link']."'>".$link['link']."</a>
+								<a href='".$link['link']."' target='_blank' rel='noreferrer noopener'>".$link['link']."</a>
 							</td>
 							<td>
-								<a href='./redir.php?id=".$link['linkid']."'>Shortened Link</a>
+								<a href='./redir.php?id=".$link['linkid']."' target='_blank' rel='noreferrer noopener'>Shortened Link</a>
 							</td>
 							<td>
 								".$link['nclicks']."
@@ -207,11 +207,16 @@
 			xhr.onload = function(){
 				let response = JSON.parse(xhr.responseText);
 
+				let path = window.location.origin + window.location.pathname;
+				let index = path.indexOf('usercp.php');
+
+				path = path.slice(0,index) + "redir.php?id=";
+
 				if(response.status === 200){
 					document.querySelector('#shortenedlink').innerHTML = `
 						<div id='link' class='row'>
 							<div class='col-md-9 linkarea'>
-								${window.location.origin+"/redir.php?id="+response.id.toString()}
+								${path+response.id.toString()}
 							</div>
 							<div class='col-md-3 copybutton' onclick='copy()'>
 									Copy

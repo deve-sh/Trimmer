@@ -45,7 +45,7 @@
 
         $finalarray=array_merge($array1,$array2);
 
-        $array3=array('$','/','.','&','#','@','!','(',')','%','+','-');  // SPECIAL CHARACTERS ARRAY.
+        $array3=array('/','.','&','#','@','!','(',')','%','+','-');  // SPECIAL CHARACTERS ARRAY.
 
         $finalarray=array_merge($finalarray,$array3);
 

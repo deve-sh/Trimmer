@@ -3,6 +3,9 @@
 	require('./installchecker.php');
 	require('../inc/connect.php');
 	require('../inc/salt.php');
+
+	$_SESSION['tuserid'] = false;
+	$_SESSION['tlogin'] = false;
 ?>
 <!DOCTYPE html>
 <html>

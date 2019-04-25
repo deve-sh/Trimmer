@@ -12,27 +12,28 @@
 
 			$link = $_GET['link'];
 
-			$query1 = "SELECT * FROM ".$sub."links";
+			$sql1 = "INSERT INTO ".$sub."links(link,nclicks) VALUES('".$link."',0)";
 
-			$n = $db->numrows($db->query($query1));
-			$n = $n + 1;
+			try{
+				$linked = $db->query($sql1);
 
-			$morequeries = array(
-				"INSERT INTO ".$sub."links(link,nclicks) VALUES('".$link."',0)",
-				"INSERT INTO ".$sub."userlinks(userid,linkid) VALUES(".$_SESSION['tuserid'].",".$n.")"
-			);
+				$sql2 = "SELECT * FROM ".$sub."links ORDER BY linkid DESC LIMIT 1";	// Selecting the last record just inserted.
 
-			$errors = 0;
+				$linked = $db->query($sql2);
 
-			foreach ($morequeries as $mquery) {
-				if(!$db->query($mquery)){
-					$errors++;
-					echo "{\"status\":500}";	// Error in database.
-					exit();
-				}
+				$linked1 = $db->fetch($linked);
+
+				$linkid = $linked1['linkid'];
+
+				$sql3 = "INSERT INTO ".$sub."userlinks(userid,linkid) VALUES('".$_SESSION['tuserid']."','".$linkid."')";
+
+				$db->query($sql3);
+			}
+			catch(Exception $e){
+				echo "{\"status\":500}";	// Error in database.
 			}
 			
-			echo "{\"status\":200,\"id\":".$n."}";
+			echo "{\"status\":200,\"id\":".$linkid."}";
 		}
 		else{
 			echo "{\"status\":300}";	// Link not passed.
