@@ -25,7 +25,8 @@
 			<h5>Update Email</h5>
 			<input type="email" name="email" required placeholder="New Email">
 			<br/>
-			<button type="submit" class="btn btn-primary">Change</button>
+			<button type="submit" class="btn btn-primary">Change</button> &nbsp;
+			<a href='./usercp.php'><span class="btn homebutton">Back</span></a>
 		</form>
 	</div>
 </body>
